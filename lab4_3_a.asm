@@ -18,18 +18,18 @@ main:
 	li		$s0, 8
 	sw		$s0, 32($sp)
 	
-	addi	$t3, $sp, 4
-	addi	$t4, $sp, 20
+	addi	$t1, $sp, 4
+	addi	$t2, $sp, 20
 	
 loop:
-	add		$t1,$zero, $zero
-	lw		$t5, 0($t3)
-	lw		$t6, 0($t4)
-	sw		$t6, 0($t3)
-	sw		$t5, 0($t4)
-	addi	$t3, $t3, 4
-	addi	$t4, $t4, 4
+	add		$t3,$zero, $zero
+	lw		$t5, 0($t1)
+	lw		$t6, 0($t2)
+	sw		$t6, 0($t1)
+	sw		$t5, 0($t2)
+	addi	$t1, $t1, 4
+	addi	$t2, $t2, 4
 	addi	$t0, $t0,1
-	slt		$t1, $t0, 3
-	bnez	$t1, loop
+	slt		$t3, $t0, 3
+	bnez	$t3, loop
 	j		$31
