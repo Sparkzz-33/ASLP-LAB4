@@ -32,8 +32,4 @@ loop:
 	addi	$t0, $t0,1
 	slt		$t1, $t0, 3
 	bnez	$t1, loop
-	add		$t0, $zero, $zero
-	add		$t3, $zero, $zero
-	add		$t3, $sp, $t3
-	addi	$t3, $t3, 4
 	j		$31
